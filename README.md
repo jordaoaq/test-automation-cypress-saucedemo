@@ -49,10 +49,17 @@ This project is an end-to-end (E2E) automated test suite developed for the "[Sau
 
 ## Implemented Patterns and Best Practices
 
+* **Bug Reporting:** Detailed bug reports for defects found during testing, formatted to simulate documentation in a tool like Jira. (See the `/bug_reports` directory).
 * **Custom Commands:** Abstraction of repetitive logic to increase code readability and maintainability. The following commands were created:
     * `cy.login(username, password)`
     * `cy.buyItemByIndex(index)`
-    *
+    * `cy.setupCheckout()`
+* **Data-Driven Testing:** Use of data arrays to test multiple form validation scenarios with a single block of code, reducing duplication and making it easy to add new test cases.
+* **Organization with Hooks (`beforeEach`):** Use of the `beforeEach` hook to prepare the application state before each test, ensuring they are independent and consistent.
+* **Robust Selector Strategy:** Prioritization of `[data-test]` selectors to decouple tests from changes in HTML structure or styling, making the automation more stable.
+
+
+🇧🇷 *PORTUGUÊS*
 
 # Projeto de Automação de Testes E2E - Sauce Demo
 
@@ -102,6 +109,7 @@ Este projeto é uma suíte de testes automatizados de ponta a ponta (E2E) desenv
 
 ## Padrões e Boas Práticas Implementadas
 
+* **Documentação de Bugs:** Criação de relatórios de bugs detalhados para os defeitos encontrados, simulando o processo de documentação em ferramentas como Jira. (Veja a pasta `/bug_reports`).
 * **Comandos Customizados:** Abstração de lógicas repetitivas para aumentar a legibilidade e a manutenção do código. Foram criados os seguintes comandos:
     * `cy.login(username, password)`
     * `cy.buyItemByIndex(index)`
