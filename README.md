@@ -1,3 +1,59 @@
+🇧🇷 *Uma versão em português existe abaixo!*
+***
+
+# E2E Test Automation Project - Sauce Demo
+
+![Cypress](https://img.shields.io/badge/Cypress-13.11.0-darkgreen?style=for-the-badge&logo=cypress)
+
+This project is an end-to-end (E2E) automated test suite developed for the "[Sauce Demo](https://www.saucedemo.com/)" e-commerce demo website. The main goal is to demonstrate skills in web test automation using Cypress, applying development and test organization best practices.
+
+## Features Tested
+
+* **Authentication:**
+    * Login with valid credentials.
+    * Error validation for invalid credentials, locked-out users, and empty fields.
+* **Shopping Cart:**
+    * Adding one or more items to the cart.
+    * Removing items from the cart.
+    * Verification of the item count on the cart badge.
+* **Checkout Flow:**
+    * Error validation for the checkout form with empty required fields.
+    * Documentation of known bugs (e.g., invalid data validation) using skipped tests (`.skip()`).
+* **Full Purchase Flow:**
+    * An end-to-end test that simulates the complete user journey, from login to the order confirmation page.
+
+## Technologies Used
+
+* **Cypress:** The main framework for E2E test automation.
+* **JavaScript:** The programming language for writing the test scripts.
+* **Node.js/npm:** Package manager and execution environment.
+
+## How to Run the Project
+
+1.  **Prerequisite:** Have [Node.js](https://nodejs.org/) installed.
+
+2.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/YOUR-USERNAME/YOUR-REPOSITORY-NAME.git](https://github.com/YOUR-USERNAME/YOUR-REPOSITORY-NAME.git)
+    ```
+3.  **Navigate to the project folder and install the dependencies:**
+    ```bash
+    cd your-repository-name
+    npm install
+    ```
+
+4.  **Run the tests by opening the Cypress Test Runner:**
+    ```bash
+    npx cypress open
+    ```
+
+## Implemented Patterns and Best Practices
+
+* **Custom Commands:** Abstraction of repetitive logic to increase code readability and maintainability. The following commands were created:
+    * `cy.login(username, password)`
+    * `cy.buyItemByIndex(index)`
+    *
+
 # Projeto de Automação de Testes E2E - Sauce Demo
 
 ![Cypress](https://img.shields.io/badge/Cypress-13.11.0-darkgreen?style=for-the-badge&logo=cypress)
